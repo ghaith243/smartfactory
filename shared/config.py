@@ -1,19 +1,16 @@
+NOMBRE_PIECES = 5
 
-class Machine:
-    def __init__(self, nom):
-        self.nom = nom
-        self.active = True
-        self.compteur = 0
+# Mettre True pour simuler une panne
+SIMULER_PANNE = False
 
-    def produire(self):
-        if self.active:
-            self.compteur += 1
-            print(f"{self.nom} : produit numéro {self.compteur}")
+# La panne survient après 3 pièces
+SEUIL_PANNE = 3
 
-    def arreter(self):
-        self.active = False
-        print(f"{self.nom} est arrêtée.")
-
-    def demarrer(self):
-        self.active = True
-        print(f"{self.nom} est démarrée.")
+DUREE_FABRICATION = 2
+DUREE_ASSEMBLAGE = 3
+DUREE_CONTROLE = 1
+DUREE_MAINTENANCE = 3
+# Consommation énergétique par opération (kWh)
+ENERGIE_FABRICATION = 5
+ENERGIE_ASSEMBLAGE = 3
+ENERGIE_CONTROLE = 2
